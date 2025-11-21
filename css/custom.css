@@ -1,0 +1,691 @@
+:root {
+  --accent: #ff9000;
+  --accent-soft: #ff90001a; 
+}
+/* === ОБЩИЕ СТИЛИ === */
+body {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 20px;       
+  line-height: 1.5;      
+  letter-spacing: 0.01em;
+  font-weight: 400;      
+  color: #ffffff;        
+  background-color: #000000; 
+  width: 100vw;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+p {
+  margin: 0;
+}
+/* === ТИПОГРАФИКА === */
+
+/* Пункты меню в навбаре */
+.nav-link {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.nav-link:hover {
+  color: var(--accent); 
+}
+/* Логотип — текст "Империя" */
+.logo-main {
+  font-size: 19.2px;
+  line-height: 19.2px;
+  letter-spacing: -1px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Логотип — бейдж "СПА" */
+.logo-badge {
+  font-size: 19.2px;
+  line-height: 19.2px;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  background-color: var(--accent);
+  border-radius: 6.4px;
+  padding: 4px 8px; 
+  display: inline-block;  
+}
+
+/* Главный заголовок */
+.heading-1 {
+  font-size: 64px;
+  line-height: 1.3; /* 130% */
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* Основной текст секций (параграфы) */
+.body-text {
+  font-size: 20px;
+  line-height: 1.5; /* 150% */
+  font-weight: 400;
+}
+
+/* Текст на кнопках */
+.button-t {
+  font-size: 16px;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+/* Мелкий текст (подписи, уточнения) */
+.sm-text {
+  font-size: 16px;
+  line-height: 20.8px;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+/* Заголовок второго уровня */
+.heading-2 {
+  font-size: 48px;
+  line-height: 1.3; /* 130% */
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* Крупный акцентный текст (например, на карточках) */
+.m-text {
+  font-size: 32px;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+/* Маленькие подписи/лейблы */
+.case {
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Цена (оранжевая) */
+.price {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-weight: 700;
+  color: var(--accent); /* твой акцентный оранжевый */
+}
+.old-price {
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: line-through;
+}
+
+/* Текст в футере */
+.footer-t {
+  font-size: 12px;
+  line-height: 18.2px;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: #eeeeee;
+}
+.text-orange {
+  color: var(--accent);
+}
+.px-40 {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+.hero-section {
+  background-image: url("../img/hero-girl.webp");
+  background-size: cover;      /* чтобы покрывала весь экран */
+  background-position: center; /* центрируем */
+  background-repeat: no-repeat;
+  margin-bottom: 64px;
+}
+
+
+.navbar {
+  margin-bottom: 4rem;
+}
+
+/* Кнопки */
+
+
+.btn {
+  border-radius: 16px;        /* скругление */
+  font-size: 16px;            /* размер шрифта */
+  line-height: 1.5;           /* высота строки */
+  font-weight: 600;           /* полужирный */
+  padding: 16px 32px;         /* 16px по Y, 32px по X (можешь подправить) */
+
+  display: inline-flex;       /* чтобы легко центрировать текст */
+  align-items: center;        /* по вертикали */
+  justify-content: center;    /* по горизонтали */
+
+  text-align: center;         /* на всякий случай */
+  white-space: nowrap;        /* чтобы не ломало строку, если текст короткий */
+}
+.btn-outline-primary {
+  background-color: #000000;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus-visible {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #000000;
+}
+
+/* Заполненная оранжевая кнопка */
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #000000;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #000;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.hero-badge {
+  background-color: var(--accent); 
+  border-radius: 16px;
+  padding: 8px 16px;
+}
+.hero-badge-icon {
+  padding-left: 8px;
+  width: 30px;
+  height: 32px;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/24:7.svg");
+  background-size: cover;      /* чтобы покрывала весь экран */
+  background-position: center; /* центрируем */
+  background-repeat: no-repeat;
+}
+
+.section-ticket {
+ height: 700px;
+ border-radius: 32px;
+ background-image: url("../img/bg-girl.png"); 
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ padding-left: 16px;
+ padding-right: 16px;
+}
+
+.pt-64 {
+  padding-top: 64px;
+}
+
+.br-32 {
+  border-radius: 32px;
+}
+.mb-64 {
+  margin-bottom: 64px;
+}
+
+.feature-card {
+  border-radius: 32px;
+  padding: 32px 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.feature-glow {
+  position: absolute;
+  width: 750px;
+  height: 750px;
+  top: 100px;
+  right: -200px;
+  background-color: rgba(255, 144, 0, 0.5); /* #FF9000 с 25% непрозрачности */
+  border-radius: 50%;                        /* круг */
+  filter: blur(350px);                       /* Layer blur из Figma */
+  pointer-events: none;                      /* чтобы не мешал кликам */
+  z-index: -1;                               /* закидываем под контент */
+}
+
+ /* Секция Мастер */
+
+.master-card-wrapper {
+  height: 100%;
+  border-radius: 24px;
+  background-color: var(--accent);
+} 
+.master-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  height: 450px;
+  padding: 16px;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+  cursor: pointer;
+}
+
+.master-card:hover {
+  transform: translate(-10px, -10px);
+}
+.master-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.master-card-body {
+  position: relative;
+  z-index: 1;
+}
+.masters-swiper {
+    padding: 15px;  
+}
+.masters-swiper .swiper-wrapper {
+  align-items: stretch; /* все .swiper-slide одной высоты */
+}
+
+/* каждый слайд — flex-колонка */
+.masters-swiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* чтобы кнопка была прижата к низу слайда */
+.master-card-btn {
+  margin-top: 16px;   /* небольшой отступ от карточки */
+}
+
+.master-info-row {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.width-400 {
+  width: 400px;
+}
+
+.masters-dot-left {
+  background-image: url("../img/arrow-left.svg");
+  width: 48px;
+  height: 48px;
+  left: -45px;
+}
+
+.masters-dot-right {
+  background-image: url("../img/arrow-right.svg");
+  width: 48px;
+  height: 48px;
+  right: -45px;
+}
+
+.masters-dot {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 5;
+}
+
+/* Общий стиль точек пагинации в секции мастеров */
+.masters-swiper .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;                /* расстояние между кружками */
+  position: static;         /* если не нужен абсолютный низ, можно так */
+  padding-top: 24px;
+  padding-bottom: 12px;  
+  height: 30px;       /* отступ от слайдера */
+}
+
+/* Базовый стиль всех буллетов */
+.masters-swiper .swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5); /* белый 50% */
+  width: 10px;
+  height: 10px;
+  opacity: 1;               /* ВАЖНО: отключаем Swiper-овскую собственную opacity */
+  border-radius: 50%;
+  margin: 0;                /* убираем стандартные внешние отступы Swiper */
+  transition: all 0.2s ease;
+}
+
+/* Активный буллет */
+.masters-swiper .swiper-pagination-bullet-active {
+  background-color: #ffffff; /* чисто белый */
+  width: 16px;
+  height: 16px;
+}
+.bg-accent-soft {
+  background-color: var(--accent-soft);
+}
+.section-programs {
+  position: relative;
+  margin-bottom: 4rem;
+  margin-left: 32px;
+  margin-right: 32px;
+  padding: 16px;
+  border-radius: 32px;
+  background-color: var(--accent-soft);
+}
+
+.program-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 24px;
+  background-color: #000000;
+  overflow: hidden;
+  padding-bottom: 16px;
+}
+.program-card-body {
+  padding: 16px;
+}
+.program-meta {
+  padding: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  background-color: var(--accent-soft);
+  border-radius: 16px;
+}
+
+.program-card-img-wrapper {
+  height: 50%;
+}
+.programs-swiper .swiper-slide {
+  align-items: stretch;
+  height: 100%;
+}
+
+
+.programs-swiper .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  position: static;    /* чтобы жила в потоке под слайдером */
+  margin-top: 24px;
+  height: 30px;      /* отступ от слайдера */
+}
+
+/* все буллеты */
+.programs-swiper .swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5); /* белый 50% */
+  width: 10px;
+  height: 10px;
+  opacity: 1;          /* отключаем встроенную прозрачность Swiper */
+  border-radius: 50%;
+  margin: 0;
+  transition: all 0.2s ease;
+}
+
+/* активный буллет */
+.programs-swiper .swiper-pagination-bullet-active {
+  background-color: #ffffff; /* чисто белый */
+  width: 16px;
+  height: 16px;
+}
+
+.program-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 5;
+}
+.program-arrow-left {
+  background-image: url("../img/arrow-left.svg");
+  width: 48px;
+  height: 48px;
+  left: -25px;
+}
+
+.program-arrow-right {
+  background-image: url("../img/arrow-right.svg");
+  width: 48px;
+  height: 48px;
+  right: -25px;
+}
+
+.list-item {
+  display: flex;               /* d-flex */
+  justify-content: space-between; 
+  flex-basis: auto;
+  align-items: center;         
+  width: 100%;         
+  padding: 16px 32px;
+  background-color: var(--accent-soft);
+  border-radius: 32px;
+ }           
+
+ .promo-card {
+  position: relative;
+  border-radius: 16px;
+  height: 500px;
+  background-color: var(--accent);
+} 
+.promo-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+  border-radius: 16px;
+}
+
+.promo-card-img:hover {
+  transform: translate(-10px, -10px);
+}
+
+.promo-badge {
+  gap: 80px;
+  border-radius: 8px;
+  background-color: var(--accent-soft);
+  padding: 16px;
+}
+
+/* галерея  */
+.gallery-nav-prev {
+  background-image: url("/img/arrow-left.svg");
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+  left: -60px;
+}  
+
+.gallery-main {
+  gap: 32px;
+}
+.gallery-nav-next {
+  background-image: url("/img/arrow-right.svg");
+  object-fit: cover;
+  object-position: center;
+  background-repeat: no-repeat;
+  width: 48px;
+  height: 48px;
+  right: -60px;
+}
+.gallery-main-img-wrapper {
+  border-radius: 32px;
+  overflow: hidden;
+}
+.gallery-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.gallery-thumb {
+  width: 100px;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 0;
+  border: 4px solid transparent;
+}
+.is-active {
+  border-color: var(--accent);
+}
+/* Карта  */ 
+
+.contacts-map-wrapper {
+  border-radius: 32px;
+  overflow: hidden;
+}
+.contacts-map{
+  width: 100%;
+  height: 500px;
+}
+.contact-address {
+  background-color: var(--accent-soft);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+/*Футер*/
+
+.footer-payment-logo {
+  max-height: 40px;
+}
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-inner {
+ padding: 32px;
+ background-color: var(--accent-soft);
+ border-top-left-radius: 32px;
+ border-top-right-radius: 32px;
+}
+
+
+
+
+/* медиазапросы */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .nav-link {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+
+  .body-text {
+    font-size: 16px;
+  }
+
+  .heading-1 {
+    font-size: 32px;
+  }
+
+  .heading-2 {
+    font-size: 24px;
+  }
+
+  .px-40 {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .masters-dot {
+    display: none;
+  }
+
+  .program-arrow {
+    display: none;
+  }
+
+  .section-ticket {
+    height: 500px;
+    background-position: top;
+    background-size: auto 130%;
+  }
+
+  .feature-glow {
+    width: 500px;
+    height: 500px;
+    top: 150px;
+    right: 300px;
+    filter: blur(200px);
+  }
+  .width-400 {
+    width: 100%;  
+  }
+ 
+  .master-card {
+    height: 550px;
+  } 
+
+  .master-info-row {
+   display: flex;
+   flex-direction: column;
+   font-size: 12px;
+  }
+
+  .price {
+   font-size: 20px;
+  }
+
+  .list-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .mb-64 {
+  margin-bottom: 32px;
+  }
+  .promo-badge {
+  gap: 20px;
+ }   
+      
+} 
+
+
+
+@media (max-width: 992px) {
+  .gallery-nav {
+    display: none;
+  }
+ 
+} 
+/* До 1200px – сдвигаем картинку ближе к центру */
+@media (max-width: 1199.98px) {
+  .hero-section {
+    background-position: 75% 20%;
+  }
+  
+}
